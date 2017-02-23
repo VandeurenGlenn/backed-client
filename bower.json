@@ -1,0 +1,34 @@
+{
+  "name": "backed-client",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Glenn Vandeuren <vandeurenglenn@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "build",
+    "bundle",
+    "serve",
+    "helper",
+    "custom",
+    "element",
+    "client",
+    "backed",
+    "html",
+    "es",
+    "plugin",
+    "backed-plugin"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "backed": "*"
+  }
+}

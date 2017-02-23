@@ -1,0 +1,55 @@
+{
+  "name": "backed-client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vandeurenglenn/backed-client.git"
+  },
+  "keywords": [
+    "build",
+    "bundle",
+    "serve",
+    "helper",
+    "custom",
+    "element",
+    "client",
+    "backed",
+    "html",
+    "es",
+    "plugin",
+    "backed-plugin"
+  ],
+  "author": "Glenn Vandeuren <vandeurenglenn@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vandeurenglenn/backed-client/issues"
+  },
+  "homepage": "https://github.com/vandeurenglenn/backed-client#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "del": "^2.2.2",
+    "gulp": "gulpjs/gulp#4.0",
+    "marked": "^0.3.6",
+    "rollup": "^0.41.4",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-json": "^2.1.0"
+  },
+  "babel": {
+    "presets": [
+      [
+        "es2015",
+        {
+          "modules": false
+        }
+      ]
+    ],
+    "plugins": [
+      "external-helpers"
+    ]
+  }
+}
