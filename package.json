@@ -51,5 +51,8 @@
     "plugins": [
       "external-helpers"
     ]
+  },
+  "dependencies": {
+    "backed": "^0.2.1"
   }
 }
