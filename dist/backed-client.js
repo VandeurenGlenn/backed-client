@@ -1,3 +1,6 @@
+(function () {
+'use strict';
+
 Backed(class BackedClient extends HTMLElement {
 
   static get properties() {
@@ -24,11 +27,7 @@ Backed(class BackedClient extends HTMLElement {
     }
   }
 
-  constructor() {
-    super();
-  }
-
-  connectedCallback() {
+  connected() {
     // let xhttp = new XMLHttpRequest();
     // xhttp.onreadystatechange = this.xhttpOnReadyStateChange;
     try {
@@ -86,4 +85,6 @@ Backed(class BackedClient extends HTMLElement {
     this.querySelector('.project-version.backed').innerHTML = `${change.value}`;
   }
 });
+
+}());
 //# sourceMappingURL=backed-client.js.map
