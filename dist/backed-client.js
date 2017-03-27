@@ -6,10 +6,6 @@ Backed(class BackedClient extends HTMLElement {
         observer: 'fileChange'
       },
 
-      bowerFile: {
-        observer: 'fileChange'
-      },
-
       npmFile: {
         observer: 'fileChange'
       },
@@ -38,7 +34,6 @@ Backed(class BackedClient extends HTMLElement {
     try {
       this.getBackedNpmFile();
       this.getNpmFile();
-      this.getBowerFile();
     } catch (error) {
       console.warn(error);
     }
@@ -52,19 +47,10 @@ Backed(class BackedClient extends HTMLElement {
   }
 
   getBackedNpmFile() {
-    this.request('/backed/package.json', (event) => {
+    this.request('/node_modules/backed/package.json', (event) => {
       const target = event.target;
       if (target.readyState == 4 && target.status == 200) {
         this.backedNpmFile = JSON.parse(target.response);
-      }
-    });
-  }
-
-  getBowerFile() {
-    this.request('/bower.json', (event) => {
-      const target = event.target;
-      if (target.readyState == 4 && target.status == 200) {
-        this.bowerFile = JSON.parse(target.response);
       }
     });
   }
@@ -79,11 +65,11 @@ Backed(class BackedClient extends HTMLElement {
   }
 
   fileChange(change) {
-    if (this.bowerFile && this.npmFile && this.backedNpmFile) {
-      this.name = this.bowerFile.name || this.npmFile.name;
+    if (this.npmFile && this.backedNpmFile) {
+      this.name = this.npmFile.name;
       // const authors = this.bowerFile.authors || this.npmFile.authors;
       // const homepage = this.bowerFile.homepage || this.npmFile.homepage;
-      this.version = this.bowerFile.version || this.npmFile.version;
+      this.version = this.npmFile.version;
       this.backedVersion = this.backedNpmFile.version;
     }
   }
