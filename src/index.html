@@ -19,45 +19,44 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png">
 
-    <!-- Load Backed -->
-    <link rel="import" href="node_modules/backed/backed.html">
-
-  </head>
-  <style>
-    html, body {
-      margin: 0;
-    }
-    html, body, backed-client {
-      height: 100%;
-      width: 100%;
-    }
-    backed-client {
-      position: absolute;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-    .hero {
-      display: flex;
-      flex-direction: column;
-      min-width: 320px;
-    }
-    .appname, h2 {
-      text-transform: uppercase;
-    }
-    .project-version {
-      padding-left: 6px;
-    }
-    h2.label {
-      display: inline-block;
-    }
-    @media (min-width: 1400px) {
-      .hero {
-        min-width: 960px;
+    <script src="node_modules/backed/dist/backed.js"></script>
+    <style>
+      html, body {
+        margin: 0;
       }
-    }
-  </style>
+      html, body, backed-client {
+        height: 100%;
+        width: 100%;
+      }
+      backed-client {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .hero {
+        display: flex;
+        flex-direction: column;
+        min-width: 320px;
+      }
+      .appname, h2 {
+        text-transform: uppercase;
+      }
+      .project-version {
+        padding-left: 6px;
+      }
+      h2.label {
+        display: inline-block;
+      }
+      @media (min-width: 1400px) {
+        .hero {
+          min-width: 960px;
+        }
+      }
+    </style>
+  </head>
+
   <body>
     <backed-client>
       <h1 class="appname">backed</h1>
