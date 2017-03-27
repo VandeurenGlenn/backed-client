@@ -25,11 +25,7 @@ Backed(class BackedClient extends HTMLElement {
     }
   }
 
-  constructor() {
-    super();
-  }
-
-  connectedCallback() {
+  connected() {
     // let xhttp = new XMLHttpRequest();
     // xhttp.onreadystatechange = this.xhttpOnReadyStateChange;
     try {
