@@ -21,7 +21,8 @@ Backed(class BackedClient extends HTMLElement {
       }
     };
   }
-  connected() {
+  ready() {
+    this.shadowRoot.innerHTML = '<slot></slot>';
     try {
       this.getBackedNpmFile();
       this.getNpmFile();

@@ -25,7 +25,8 @@ Backed(class BackedClient extends HTMLElement {
     }
   }
 
-  connected() {
+  ready() {
+    this.shadowRoot.innerHTML = '<slot></slot>';
     // let xhttp = new XMLHttpRequest();
     // xhttp.onreadystatechange = this.xhttpOnReadyStateChange;
     try {
